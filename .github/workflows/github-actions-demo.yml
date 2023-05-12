@@ -25,5 +25,5 @@ jobs:
         run: |
           resource "local_file" "welcome" {
             content  = "print('Witaj!')"
-            filename = "${pwd}/welcome.py"
+            filename = "${path.module}/welcome.py"
           }
