@@ -1,4 +1,4 @@
 resource "local_file" "welcome" {
-  content  = "print('Witaj!')"
-  filename = "${path.module}/welcome.py"
+  content  = var.zawartosc_pliku
+  filename = var.sciezka_do_pliku
 }
