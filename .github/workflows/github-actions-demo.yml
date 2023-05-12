@@ -20,3 +20,10 @@ jobs:
           sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" && \
           sudo apt-get update && \
           sudo apt-get install terraform
+          
+      - name: Make file
+        run: |
+          resource "local_file" "welcome" {
+            content  = "print('Witaj!')"
+            filename = "${pwd}/welcome.py"
+          }
